@@ -27,7 +27,7 @@ export const App = () => {
               })}
             >
               Home
-            </Link >
+            </Link>
 
             <Link
               to="/tabs"
@@ -46,7 +46,8 @@ export const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
 
-            <Route path="tabs" element={<TabsPage />}>
+            <Route path="tabs">
+              <Route index element={<TabsPage />} />
               <Route path=":tabId" element={<TabsPage />} />
             </Route>
 
@@ -57,5 +58,5 @@ export const App = () => {
         </div>
       </div>
     </>
-  )
+  );
 };
